@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Microwave Timer Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Import Map for three.js -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.149.0/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+<body>
+    <!-- Overlay Controls -->
+    <div id="overlay">
+        <div id="controls">
+            <label for="timerSelect">Select Timer:</label>
+            <select id="timerSelect">
+                <option value="30000">30 Seconds</option>
+                <option value="300000">5 Minutes</option>
+                <option value="3600000">60 Minutes</option>
+            </select>
+            <button id="goButton">GO</button>
+            <button id="openButton">OPEN</button>
+        </div>
+    </div>
+
+    <!-- Dialog Box -->
+    <div id="dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close-button" id="closeButton">&times;</span>
+            <p id="dialogText">Time left: 00:00.000</p>
+        </div>
+    </div>
+
+    <!-- Main JavaScript File -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
